@@ -2,15 +2,18 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import TestContextProvider from "./context/TestContextProvide";
-import SendData from "./components/SendData";
-import ReceiveData from "./components/ReceiveData";
+
+import TodoContextProvider from "./context/TodoContextProvider";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
 export default function App() {
   return (
-    <TestContextProvider className="text-3xl font-bold underline">
-      <SendData />
-      <ReceiveData />
-    </TestContextProvider>
+    <>
+      <TodoContextProvider>
+        <TodoInput />
+        <TodoList/>
+      </TodoContextProvider>
+    </>
   );
 }
