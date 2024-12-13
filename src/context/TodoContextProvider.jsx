@@ -22,9 +22,7 @@ function TodoContextProvider({ children }) {
   };
 
   const deleteTodo = (id) =>{
-    setTodos((prev)=>{
-        return prev.filter((item)=>item.id !== id)
-    });
+    setTodos(todos.filter(todo=>todo.id !== id));
   }
 
   return (
